@@ -8,21 +8,11 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Player implements Serializable {
-private String userName;
-private Image image;
+    private String userName;
 
-    public Image getImage() {
-        return image;
-    }
-
-    public Player(String userName, Image image, String passWord) {
+    public Player(String userName, String passWord) {
         this.userName = userName;
-        this.image = image;
         this.passWord = passWord;
-    }
-
-    public void setImage(Image image) {
-        this.image = image;
     }
 
     public String getUserName() {
@@ -42,6 +32,6 @@ private Image image;
     }
 
     private String passWord;
-Color color;
-List<Piece> pieces;
+    Color color;
+    List<Piece> pieces;
 }

@@ -44,7 +44,6 @@
       </Label>
       <Button layoutX="53.0" layoutY="96.0" mnemonicParsing="false" onAction="#changePass" style="-fx-background-color: #99ffd6;" text="finish" />
       <Button layoutX="323.0" layoutY="32.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: #99ffd6;" text="LogOut" textFill="#860b0b" />
-      <Button layoutX="299.0" layoutY="253.0" mnemonicParsing="false" onAction="#chat" text="start chat" />
-      <Button layoutX="313.0" layoutY="96.0" mnemonicParsing="false" onAction="#refresh" text="Button" />
+      <Button layoutX="325.0" layoutY="83.0" mnemonicParsing="false" onAction="#refresh" text="refresh" />
    </children>
 </AnchorPane>

@@ -18,7 +18,7 @@ public class DB implements Serializable {
 
 
     public static void savePlayersInformation() {
-        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(Files.newOutputStream(Paths.get("C:\\newChess\\src\\network\\players.ser")))) {
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(Files.newOutputStream(Paths.get("E:\\Projects\\chess\\newChess\\src\\network\\players.ser")))) {
             objectOutputStream.writeInt(playerList.size());
             for (Player player : playerList) {
                 objectOutputStream.writeObject(player);
@@ -30,7 +30,7 @@ public class DB implements Serializable {
     }
 
     public static void readPlayersInformation() {
-        try (ObjectInputStream objectInputStream = new ObjectInputStream(Files.newInputStream(Paths.get("C:\\newChess\\src\\network\\players.ser")))) {
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(Files.newInputStream(Paths.get("E:\\Projects\\chess\\newChess\\src\\network\\players.ser")))) {
             int size = objectInputStream.readInt();
             for (int i = 0; i < size; i++) {
                 playerList.add((Player) objectInputStream.readObject());

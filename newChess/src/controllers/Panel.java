@@ -18,8 +18,8 @@ import java.io.IOException;
 
 public class Panel {
 
-@FXML
-ImageView imageView;
+    @FXML
+    ImageView imageView;
     @FXML
     private ListView<String> onlineUsers = new ListView<>();
 
@@ -29,11 +29,8 @@ ImageView imageView;
     public void initialize() {
         imageView.setImage(LoginAndSignUp.image);
         for (Player player : DB.playerList) {
-            for (int i = 0; i <onlineUsers. ; i++) {
-
-            }
-            if (!onlineUsers.getItems().equals(player.getUserName()))
-            onlineUsers.getItems().add(player.getUserName());
+            if (onlineUsers.getItems().stream().noneMatch(a -> a.equals(player.getUserName())))
+                onlineUsers.getItems().add(player.getUserName());
         }
     }
 
@@ -42,20 +39,22 @@ ImageView imageView;
     }
 
 
-    public void changePass(ActionEvent actionEvent) {
+    public void changePass() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, "changed");
+        alert.showAndWait();
     }
 
     public void logOut() throws IOException {
-        Alert alert=new Alert(Alert.AlertType.WARNING,"you are logged out");
+        Alert alert = new Alert(Alert.AlertType.WARNING, "you are logged out");
         alert.showAndWait();
         new PageLoader().load("../ui/login.fxml");
     }
 
-    public void chat(ActionEvent actionEvent) throws IOException {
-        new PageLoader().load("../ui/chat.fxml");
-    }
-
-    public void refresh(ActionEvent actionEvent) {
-        initialize();
+    public void refresh() {
+        DB.readPlayersInformation();
+        for (Player player : DB.playerList) {
+            if (onlineUsers.getItems().stream().noneMatch(a -> a.equals(player.getUserName())))
+                onlineUsers.getItems().add(player.getUserName());
+        }
     }
 }

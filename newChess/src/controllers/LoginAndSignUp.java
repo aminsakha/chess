@@ -44,7 +44,7 @@ public class LoginAndSignUp {
 
 
     public void signUp() {
-        DB.playerList.add(new Player(username.getText(),image, password.getText()));
+        DB.playerList.add(new Player(username.getText(), password.getText()));
         DB.savePlayersInformation();
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "now you can log in");
