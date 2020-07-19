@@ -31,7 +31,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="39.0" layoutY="343.0" onMouseClicked="#developer" text="about Developer">
+      <Label layoutX="22.0" layoutY="349.0" onMouseClicked="#developer" text="about Developer and APK">
          <font>
             <Font name="2  Mehr Bold" size="14.0" />
          </font>

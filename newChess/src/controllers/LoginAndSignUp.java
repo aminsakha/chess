@@ -52,12 +52,8 @@ public class LoginAndSignUp {
     }
 
 
-    public void developer() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information Dialog");
-        alert.setHeaderText(null);
-        alert.setContentText("I am Amin Sakha with id 98243081\n iam so happy that you use this DEsKAPK");
-        alert.showAndWait();
+    public void developer() throws IOException {
+        new PageLoader().load("../ui/about.fxml");
     }
 
     public static Image image;
