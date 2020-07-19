@@ -25,7 +25,7 @@ public class LoginAndSignUp {
     @FXML
     Label label;
     @FXML
-    ImageView imageView;
+    TextArea textArea;
 
     public void initialize() {
         DB.readPlayersInformation();
@@ -42,7 +42,6 @@ public class LoginAndSignUp {
         }
     }
 
-
     public void signUp() {
         DB.playerList.add(new Player(username.getText(), password.getText()));
         DB.savePlayersInformation();
@@ -51,8 +50,8 @@ public class LoginAndSignUp {
         alert.showAndWait();
     }
 
-
     public void developer() throws IOException {
+
         new PageLoader().load("../ui/about.fxml");
     }
 
@@ -65,6 +64,14 @@ public class LoginAndSignUp {
         image = new Image(selectedFile.toURI().toString());
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "your photo has been uploaded");
         alert.showAndWait();
+    }
+
+    public void home() {
+        try {
+            new PageLoader().load("../ui/login.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 
