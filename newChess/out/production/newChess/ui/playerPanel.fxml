@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #99ccff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Panel">
+   <children>
+      <Label layoutX="173.0" layoutY="17.0" text="Profile">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageView" fitHeight="89.0" fitWidth="111.0" layoutX="146.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/newChess/src/Assests/i.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="onlineUsers" layoutX="105.0" layoutY="189.0" prefHeight="153.0" prefWidth="191.0" style="-fx-background-color: #e6fff5;" />
+      <Label layoutX="161.0" layoutY="163.0" text="online users">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="150.0" layoutY="357.0" mnemonicParsing="false" onAction="#startGame" style="-fx-background-color: #99ffd6;" text="start the battle">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="changePass" layoutX="20.0" layoutY="57.0" prefHeight="25.0" prefWidth="111.0" promptText="new password">
+         <effect>
+            <Reflection />
+         </effect></PasswordField>
+      <Label layoutX="28.0" layoutY="22.0" prefHeight="20.0" prefWidth="111.0" text="change pass">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="53.0" layoutY="96.0" mnemonicParsing="false" onAction="#changePass" style="-fx-background-color: #99ffd6;" text="finish" />
+      <Button layoutX="323.0" layoutY="32.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: #99ffd6;" text="LogOut" textFill="#860b0b" />
+      <Button layoutX="299.0" layoutY="253.0" mnemonicParsing="false" onAction="#chat" text="start chat" />
+      <Button layoutX="313.0" layoutY="96.0" mnemonicParsing="false" onAction="#refresh" text="Button" />
+   </children>
+</AnchorPane>
